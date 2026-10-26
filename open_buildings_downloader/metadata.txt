@@ -1,0 +1,29 @@
+[general]
+name=Open Buildings Downloader
+qgisMinimumVersion=3.38
+qgisMaximumVersion=4.99
+supportsQt6=yes
+hasProcessingProvider=yes
+version=0.1.0
+author=Pedro Branco
+email=support@coldlabs.app
+description=Download Google Open Buildings v3 footprints as polygons, points or both, for the map view or a polygon layer.
+about=Downloads building footprints from Google Open Buildings v3 for the current map extent or the polygons of a layer. Output as polygons, centroid points or both, with confidence, area and Plus Code, coloured by confidence.
+
+    Coverage: Africa, South and Southeast Asia, Latin America and the Caribbean only. Europe and North America have no data.
+
+    Google publishes the data as whole files of about 100 km by 100 km, so the first run in a region downloads every file the area touches (up to a few hundred MB). Files are cached in the QGIS profile folder and reused. No extra Python packages are needed.
+
+    Data licence: Google Open Buildings is published by Google under CC BY 4.0 and ODbL v1.0; you may use it under either. Credit Google Open Buildings when you publish maps or data made with it. This plugin is not affiliated with Google.
+
+    Runs as a Processing algorithm, so it also works in models, batch mode and qgis_process.
+homepage=https://github.com/ColdLabs/qgis-open-buildings#readme
+repository=https://github.com/ColdLabs/qgis-open-buildings
+tracker=https://github.com/ColdLabs/qgis-open-buildings/issues
+category=Web
+icon=icon.svg
+tags=buildings,google,open buildings,footprints,download,processing,africa,asia,latin america
+changelog=0.1.0
+    - First release: download by map extent or polygon layer, as polygons, points or both
+    - Minimum confidence filter and a download size limit
+    - Loaded layers are coloured by confidence
