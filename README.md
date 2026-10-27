@@ -8,7 +8,7 @@ Coverage is Africa, South and Southeast Asia, Latin America and the Caribbean. E
 
 In QGIS: **Plugins → Manage and Install Plugins → All**, search for "Open Buildings Downloader", then **Install**. Requires QGIS 3.38 or later (Qt5 or Qt6). No extra Python packages are needed.
 
-To install from this repository instead, run `./build_zip.sh` and use **Plugins → Manage and Install Plugins → Install from ZIP**.
+To install without the plugin repository, download the zip from the [latest release](https://github.com/ColdLabs/qgis-open-buildings/releases/latest) and use **Plugins → Manage and Install Plugins → Install from ZIP**.
 
 ## Use
 
