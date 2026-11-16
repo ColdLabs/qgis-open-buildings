@@ -4,6 +4,12 @@ Downloads Google Open Buildings v3 footprints for the map view or the polygons o
 
 Coverage is Africa, South and Southeast Asia, Latin America and the Caribbean. Europe and North America have no data.
 
+![Building footprints in central Praia, Cape Verde, coloured by confidence](docs/screenshot-praia.png)
+
+*Central Praia, Cape Verde: building polygons coloured by confidence, as the plugin styles them.*
+
+For Europe, North America and Australia, see the sibling plugin [GlobalML Buildings Downloader](https://github.com/ColdLabs/qgis-globalml-buildings).
+
 ## Install
 
 In QGIS: **Plugins → Manage and Install Plugins → All**, search for "Open Buildings Downloader", then **Install**. Requires QGIS 3.38 or later (Qt5 or Qt6). No extra Python packages are needed.
