@@ -56,6 +56,13 @@ class ConfidenceStyle(QgsProcessingLayerPostProcessorInterface):
         layer.triggerRepaint()
 
 
-# Processing keeps only a pointer to the post-processor, so it must outlive the
-# algorithm run; one shared instance does.
-CONFIDENCE_STYLE = ConfidenceStyle()
+# QGIS takes ownership of a post-processor and deletes it after the run, so
+# every output of every run needs a new one. Python still holds each one, or
+# the wrapper could be collected before QGIS calls it.
+_live = []
+
+
+def confidence_style():
+    style = ConfidenceStyle()
+    _live.append(style)
+    return style

@@ -24,7 +24,7 @@ from qgis.PyQt.QtCore import QCoreApplication, QMetaType
 from qgis.PyQt.QtGui import QIcon
 
 from . import s2, tiles
-from .style import CONFIDENCE_STYLE
+from .style import confidence_style
 
 ICON = os.path.join(os.path.dirname(__file__), 'icon.svg')
 WGS84 = QgsCoordinateReferenceSystem('EPSG:4326')
@@ -285,7 +285,7 @@ class DownloadBuildings(QgsProcessingAlgorithm):
         for dest in results.values():
             if context.willLoadLayerOnCompletion(dest):
                 context.layerToLoadOnCompletionDetails(dest).setPostProcessor(
-                    CONFIDENCE_STYLE
+                    confidence_style()
                 )
 
         bbox = area.boundingBox()

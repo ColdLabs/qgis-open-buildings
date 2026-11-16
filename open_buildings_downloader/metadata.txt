@@ -3,7 +3,7 @@ name=Open Buildings Downloader
 qgisMinimumVersion=3.38
 qgisMaximumVersion=4.99
 hasProcessingProvider=yes
-version=0.1.1
+version=0.1.2
 author=Pedro Branco
 email=support@coldlabs.app
 description=Download Google Open Buildings v3 footprints as polygons, points or both, for the map view or a polygon layer.
@@ -22,7 +22,9 @@ tracker=https://github.com/ColdLabs/qgis-open-buildings/issues
 category=Web
 icon=icon.svg
 tags=buildings,google,open buildings,footprints,download,processing,africa,asia,latin america
-changelog=0.1.1
+changelog=0.1.2
+    - Fix: a second run in the same QGIS session failed with "wrapped C/C++ object ... has been deleted"; every run now gets its own confidence colouring
+    0.1.1
     - Metadata: drop the deprecated Qt6 flag; QGIS 4 support comes from the maximum version (4.99)
     0.1.0
     - First release: download by map extent or polygon layer, as polygons, points or both
